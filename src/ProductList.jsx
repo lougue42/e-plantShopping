@@ -101,7 +101,7 @@ function ProductList({ onHomeClick }) {
         padding: '15px',
         display: 'flex',
         justifyContent: 'space-between',
-        alignIems: 'center',
+        alignItems: 'center',
         fontSize: '20px',
     };
 
@@ -126,6 +126,7 @@ function ProductList({ onHomeClick }) {
     const handleCartClick = (e) => {
         e.preventDefault();
         setShowCart(true);
+        setShowPlants(false);
     };
 
     const handlePlantsClick = (e) => {
@@ -137,6 +138,7 @@ function ProductList({ onHomeClick }) {
     const handleContinueShopping = (e) => {
         e.preventDefault();
         setShowCart(false);
+        setShowPlants(true); // This ensures the plant list is shown again
     };
 
     const handleAddToCart = (plant) => {
